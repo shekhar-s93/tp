@@ -1,0 +1,94 @@
+body {
+    font-family: 'Roboto', sans-serif;    
+    position: relative;
+    background: #fff; 
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/icon/bg_icon2.png');
+    /* background-size: cover; */
+    /* opacity: 0.5;  */
+    z-index: -1; 
+}
+
+.menu_page {
+    position: relative;
+    padding: 50px;
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+.mytabs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 85%;
+    margin: 50px auto;
+    padding: 25px;
+    background: #fdb913; 
+    border-radius: 10px;
+    z-index: 1; 
+}
+
+.mytabs input[type="radio"] {
+    display: none;
+}
+
+.mytabs label {
+    padding: 25px;
+    background: #e2e2e2;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.mytabs .tab {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    order: 1;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mytabs .tab h2 {
+    font-size: 2em;
+}
+
+.mytabs input[type='radio']:checked + label + .tab {
+    display: block;
+}
+
+.mytabs input[type="radio"]:checked + label {
+    background: #fff;
+    border-bottom: 2px solid #3b3091;
+}
+
+.course-information a {
+    color: white; 
+    text-decoration: none; 
+}
+
+.course-information li {
+    list-style-type: none;
+    padding: 15px;
+    background-color: #3b3091;
+    border-radius: 5px;
+    text-align: center; 
+}
+
+.course-information ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; 
+}
